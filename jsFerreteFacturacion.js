@@ -4,37 +4,72 @@ B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 
-var producto1;
-var producto2;
-var producto3;
-var suma;
-var promedio;
-var iva;
-var precioFinal;
-
-	producto1 = document.getElementById("precioUno");
-	producto2 = document.getElementById("precioDos");
-	producto3 = document.getElementById("precioTres");
-
-	suma = parseInt(suma);
-	promedio = parseInt(promedio);
-	promedio = parseInt(promedio);
-
 function Sumar () 
 {
-	suma = producto1 + producto2 + producto3;
-	suma = parseInt(suma);
-	alert("Suma total: $" + suma);
-}
-function Promedio () 
-{
-	promedio = suma / 3;
-	alert("Promedio: $" + suma);
-}
-function PrecioFinal () 
-{
-	iva = (suma*21)/100;
-	precioFinal = suma + iva;
-	alert("Precio final +IVA: $" + suma);
+
+    //Variables
+    var precioUno;
+    var precioDos;
+    var precioTres;
+    var sumaTotalPrecios;
+
+    //Ingreso de datos
+    precioUno = parseInt(document.getElementById("PrecioUno").value);
+    precioDos = parseInt(document.getElementById("PrecioDos").value);
+    precioTres = parseInt(document.getElementById("PrecioTres").value);	
+
+
+    //Proceso
+    sumaTotalPrecios = precioUno + precioDos + precioTres;
+
+    //Salida de datos
+    alert("La suma: " + sumaTotalPrecios);
 }
 
+function Promedio () 
+{
+
+	//Variables
+    var precioUno;
+    var precioDos;
+    var precioTres;
+    var sumaTotalPrecios;
+    var promedio;
+
+    //Ingreso de datos
+    precioUno = parseInt(document.getElementById("PrecioUno").value);
+    precioDos = parseInt(document.getElementById("PrecioDos").value);
+    precioTres = parseInt(document.getElementById("PrecioTres").value);	
+
+    //Proceso
+    sumaTotalPrecios = precioUno + precioDos + precioTres;
+    promedio = sumaTotalPrecios / 3;
+
+    //Salida de datos
+    alert("El promedio es: " + promedio);
+
+}
+
+function PrecioFinal () 
+{
+
+	//Variables
+    var precioUno;
+    var precioDos;
+    var precioTres;
+    var sumaTotalPrecios;
+    var sumaTotalPreciosIVA;
+
+    //Ingreso de datos
+    precioUno = parseInt(document.getElementById("PrecioUno").value);
+    precioDos = parseInt(document.getElementById("PrecioDos").value);
+    precioTres = parseInt(document.getElementById("PrecioTres").value);	
+
+    //Proceso
+    sumaTotalPrecios = precioUno + precioDos + precioTres;
+    sumaTotalPreciosIVA = sumaTotalPrecios * 1.21;
+
+    //Salida de datos
+    alert("El precio final es: " + sumaTotalPreciosIVA + ", esto incluye IVA(21%)");
+
+}
