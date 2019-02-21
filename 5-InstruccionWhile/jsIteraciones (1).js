@@ -1,12 +1,11 @@
 function mostrar()
 {
-	//alert('iteración while');
 
-	var num = 1;
+var num = 1;
 
 	while (num < 11) {
 
-		alert(num++)
+		console.log(num++);
 
 	}
 
