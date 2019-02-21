@@ -1,19 +1,34 @@
 function mostrar()
 {
 
-var clave = prompt("ingrese clave.");
-var intentos = 1;
+var clave;
+var intentos=0;
 
-	while (clave != "utn750" && intentos < 3) {
+    clave = prompt("Ingrese su clave");
+    intentos ++;
 
-   		alert("Clave incorrecta, intente nuevamente.");
+	while (clave != "utn750" && intentos < 3){
 
-   		clave = prompt("Ingrese clave.");
-   		intentos++;
+		alert("Clave incorrecta. Intente de nuevo.");
 
+		clave = prompt("Ingrese su clave");
+   		intentos ++;
 
+   		if (clave == "utn750" && intentos <=3) {
+
+   			alert("Bienvenido.");
 
    		}
+
+   		if (intentos == 3 && clave != "utn750"){
+   			alert("Intentos agotados.");
+   	
+
+   		}
+
+		
+    }
+
 
 
 
