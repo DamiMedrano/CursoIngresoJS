@@ -18,7 +18,7 @@ function CalcularPrecio ()
     var precio = 35
 
     var cantidad = document.getElementById("Cantidad").value;
-    cantidad = parseInt(cantidad);
+        cantidad = parseInt(cantidad);
 
     var marca = document.getElementById("Marca").value;
 
@@ -86,22 +86,39 @@ function CalcularPrecio ()
 }
 
 
-/*var cantidadDeLamparas;                             /////INTENTO 1
-	var descuento;
-	var marca;
-	var IIBB;
-	var precioConDescuento;
-	var precioDeLamparas = 35;
-
+/*
+                                                               /////CON SWITCH
+	var precio = 35;
+	
     cantidadDeLamparas = parseInt(document.getElementById("Cantidad").value);
-	marca = document.getElementById("Marca").value;
+    marca = document.getElementById("Marca").value;
+
+    var iibb;
+    var final;
 
 
-	switch (marca){
+	switch (cantidadDeLamparas) {
 
-		case "ArgentinaLuz": 
+		case 6: 
 
-			if(cantidadDeLamparas >= 6) {
+            final = cantidadDeLamparas * precio;
+
+        break;
+
+        case 5:
+        
+        break; 
+
+
+        case 4: 
+        break;
+
+        case 3:
+        break;
+
+        default;
+
+			if(marca == "ArgentinaLuz") {
 				descuento = 0.5; //50%
 			}
 			if(cantidadDeLamparas == 5) {

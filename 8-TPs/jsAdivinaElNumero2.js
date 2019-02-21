@@ -15,13 +15,18 @@ var contadorIntentos;
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
-	 
-	
+	numeroSecreto = Math.floor(Math.random() * 101);
 
+	//PARA VERIFICAR:
+	alert(numeroSecreto);
+	
 }
 
 function verificar()
 {
+	if(
+		
+
 	
 	
 
