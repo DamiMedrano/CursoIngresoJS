@@ -1,11 +1,34 @@
 function mostrar()
 {
 
+	var contadorPositivo=0;
+	var contadorNegativo=0;
 	var contador=0;
-	var positivo=0;
-	var negativo=1;
-	
-	var respuesta='si';
+
+	var sumaPositivos;
+	var miltiplicacionNegativos;
+	var num;
+	var respuesta;
+
+	respuesta = prompt("¿Desea comenzar?");
+	respuesta = respuesta.toLowerCase();
+
+	while (respuesta == "si") {
+
+		num = prompt("Ingrese un numero");
+		num = parseInt(num);
+		contador++;
+
+		if (num >=1){
+
+			sumaPositivos = sumaPositivos + num;
+			
+		}
+
+		respuesta = prompt(contador + "° numero ingresado con exito, ¿desea seguir agregando numeros?");
+
+		if respuesta == 
+	}
 
 
 document.getElementById('suma').value=positivo;
