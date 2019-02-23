@@ -1,37 +1,36 @@
 function mostrar()
 {
 
-	var contadorPositivo=0;
-	var contadorNegativo=0;
-	var contador=0;
-
-	var sumaPositivos;
-	var miltiplicacionNegativos;
-	var num;
+	var sumaPositivos=0;
+	var multiplicacionNegativos=1;
+	var numero;
 	var respuesta;
 
 	respuesta = prompt("¿Desea comenzar?");
 	respuesta = respuesta.toLowerCase();
 
-	while (respuesta == "si") {
+	do {
 
-		num = prompt("Ingrese un numero");
-		num = parseInt(num);
-		contador++;
+		numero = prompt("Ingrese un numero");
+		numero = parseInt(numero);
 
-		if (num >=1){
+		if (numero >=0){
 
-			sumaPositivos = sumaPositivos + num;
+			sumaPositivos = sumaPositivos + numero;
 			
 		}
+		else {
 
-		respuesta = prompt(contador + "° numero ingresado con exito, ¿desea seguir agregando numeros?");
+			multiplicacionNegativos = multiplicacionNegativos * numero;
+		}
 
-		if respuesta == 
-	}
+		respuesta = prompt("numero ingresado con exito, ¿desea seguir agregando numeros?");
+		respuesta = respuesta.toLowerCase();
+
+	} while (respuesta == "si");
 
 
-document.getElementById('suma').value=positivo;
-document.getElementById('producto').value=negativo;
+document.getElementById('suma').value=sumaPositivos;
+document.getElementById('producto').value=multiplicacionNegativos;
 
 }//FIN DE LA FUNCIÓN

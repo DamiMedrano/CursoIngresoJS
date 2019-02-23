@@ -11,7 +11,7 @@ var intentos=0;
 
 		alert("Clave incorrecta. Intente de nuevo.");
 
-		clave = prompt("Ingrese su clave");
+		  clave = prompt("Ingrese su clave");
    		intentos ++;
 
    		if (clave == "utn750" && intentos <=3) {
@@ -21,7 +21,7 @@ var intentos=0;
    		}
 
    		if (intentos == 3 && clave != "utn750"){
-   			alert("Intentos agotados.");
+   			  alert("Intentos agotados.");
    	
 
    		}

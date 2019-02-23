@@ -10,6 +10,4 @@ var num = 10;
     }
 
 
-
-
 }//FIN DE LA FUNCIÓN

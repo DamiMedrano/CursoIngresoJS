@@ -17,11 +17,6 @@ function mostrar()
 	respuesta = respuesta.toLowerCase();
 
 
-	//while (respuesta != "si" && respuesta != "no") {
-
-    	//alert("Ingrese respuesta indicando solo 'si' o 'no'");
-
-    //}
 	do { 
 
 		sumador = prompt("Ingrese un numero");
@@ -32,11 +27,6 @@ function mostrar()
 
 		respuesta = prompt("Numero ingresado con exito, son " + contador + " numeros, ¿desea añadir otro?")
 		respuesta = respuesta.toLowerCase();
-
-		if (respuesta == "no") {
-			
-			break
-		}
 
     } while (respuesta == "si")
 
