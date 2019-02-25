@@ -10,7 +10,8 @@ Desde  6 Intentos hasta 10:”falta técnica”
 Más de 10 intentos: “afortunado en el amor!!”.*/
 
 var numeroSecreto; 
-var contadorIntentos;
+var contadorIntentos=0;
+var numeroAdivinado;
 
 function comenzar()
 {
@@ -19,15 +20,47 @@ function comenzar()
 
 	//PARA VERIFICAR:
 	alert(numeroSecreto);
-	
 }
 
 function verificar()
 {
-	if(
-		
+	numeroAdivinado=document.getElementById("numero").value;
 
-	
-	
+	if (numeroAdivinado == numeroSecreto){
 
+		contadorIntentos++;
+
+		if(contadorIntentos==1){
+			alert("Correcto! " + contadorIntentos + " intento. Usted es un Psíquico!");
+			document.getElementById("intentos").value = contadorIntentos;
+		}
+		if(contadorIntentos==2){
+			alert("Correcto! " + contadorIntentos + " intentos. Excelente percepción!");
+			document.getElementById("intentos").value = contadorIntentos;
+		}
+		if(contadorIntentos==3){
+			alert("Correcto! " + contadorIntentos + " intentos. Esto es suerte!");
+			document.getElementById("intentos").value = contadorIntentos;
+		}
+		if(contadorIntentos==4){
+			alert("Correcto! " + contadorIntentos + " intentos. Excelente técnica!");
+			document.getElementById("intentos").value = contadorIntentos;
+		}
+		if(contadorIntentos==5){
+			alert("Correcto! " + contadorIntentos + " intentos. Usted está en la media.");
+			document.getElementById("intentos").value = contadorIntentos;
+		}
+		if(contadorIntentos>=6 && contadorIntentos<=10){
+			alert("Correcto! " + contadorIntentos + " intentos. Falta técnica.");
+			document.getElementById("intentos").value = contadorIntentos;
+		}
+		else if(contadorIntentos>10){
+			alert("Correcto! " + contadorIntentos + " intentos. Afortunado en el amor!!.");
+			document.getElementById("intentos").value = contadorIntentos;
+		}
+	}
+	else{
+		contadorIntentos++;
+		alert("Ese numero no es.");
+	}	
 }

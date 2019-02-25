@@ -17,7 +17,7 @@ function comenzar()
 	numeroSecreto = Math.floor(Math.random() * 101);
 
 	//DESCOMENTAR PARA ALERTAR N°SECRETO ANTES DE JUGAR
-	//alert(numeroSecreto);
+	alert(numeroSecreto);
 }
 
 function verificar()
