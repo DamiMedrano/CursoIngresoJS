@@ -14,10 +14,11 @@ function mostrar()
 	var planeta;
 
 	planeta=prompt("Ingrese el nombre del planeta:");
+	planeta=planeta.toLowerCase();
 
 	switch(planeta){
 
-		case "Tierra":
+		case "tierra":
 		alert("Acá vivimos");
 		break;
 

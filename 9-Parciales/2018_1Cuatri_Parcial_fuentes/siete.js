@@ -9,47 +9,48 @@ c) La cantidad de varones que su nota haya sido mayor o igual a 6.
 */
 function mostrar()
 {
-	var contadorAlumnos=0;
+	var contIngresos=0;
 	var nota;
-	var sumaNotas;
+	var sumaNotas=0;
 	var promedio;
-	var sexo:
+	var sexo;
 	var notaMasBaja=10;
 	var sexoNotaMasBaja;
+	var contVaronesAprobados=0;
 
-	while(contadorAlumnos<5){
+	do{
 
-		contadorAlumnos++;
+		contIngresos++;
 
 		//NOTA
-		nota=prompt("Ingrese su nota");
-		nota=parseInt(nota);
+		do{
+			nota=prompt("Ingrese su nota");
+			nota=parseInt(nota);
 
-		if(nota<0 || nota>10){
-			nota=prompt("Nota invalida. Ingrese su nota del 0 al 10");
-		}
-		if(nota<notaMasBaja){
-			notaMasBaja=nota;
-		}
+		}while(nota<0 || nota>10 || isNaN(nota));
+
+		sumaNotas+=nota;
 
 		//SEXO
-		sexo=prompt("Ingrese su genero");
-		sexo.toLowerCase();
+		do{
+			sexo=prompt("Ingrese su genero");
+			sexo.toLowerCase();
 
-		if(sexo != "f" && sexo != "m"){
-			sexo=prompt("Sexo no valido. Ingrese un genero");
+		}while(sexo != "f" && sexo != "m")
+
+		if(nota<notaMasBaja){
+			notaMasBaja=nota;
+			sexoNotaMasBaja=sexo;
 		}
-		else{
-			if()
+		if(nota>=6 && sexo=="m"){
+			contVaronesAprobados++;
 		}
+	}while(contIngresos<5);
 
 
+	promedio=sumaNotas/5;
 
-
-
-
-	}
-
-	promedio=sumaNotas/contadorAlumnos;
-
+	alert("Promedio de las notas: " + promedio);
+	alert("La nota mas baja fue : " + notaMasBaja + ", y el sexo fue: " + sexoNotaMasBaja);
+	alert("Cantidad de varones con nota mayor o igual a 6: " + contVaronesAprobados);
 }
